@@ -6,6 +6,7 @@ import projImg3 from "../assets/img/project-ecco.png";
 import projImg4 from "../assets/img/project-misak.png";
 import projImg5 from "../assets/img/project-estudio.png";
 import projImg6 from "../assets/img/project-sercor.png";
+import projImg7 from "../assets/img/project-citobot.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -22,6 +23,11 @@ export const Projects = () => {
       title: "Smart Ambulance",
       description: "Design & Development",
       imgUrl: projImg2,
+    },
+    {
+      title: "Citobot",
+      description: "Development & Update",
+      imgUrl: projImg7,
     },
     {
       title: "Ecco",
@@ -42,7 +48,8 @@ export const Projects = () => {
       title: "Sercor",
       description: "Implementation & Update",
       imgUrl: projImg6,
-    },
+    }
+    
   ];
 
   return (
