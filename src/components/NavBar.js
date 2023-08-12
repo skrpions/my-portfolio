@@ -33,8 +33,10 @@ export const NavBar = () => {
   }
 
   const handleDownloadCV = () => {
-    window.location.href = "https://drive.usercontent.google.com/uc?id=15VZANPmkf8Kwi8iZdFJopf_6znnPQjtR&authuser=0&export=download";
+    window.location.href = "https://drive.usercontent.google.com/download?id=1ZdGB3Rj5KZMqdH3t-ztE1WfsZN4Sora0&export=download&authuser=0&confirm=t&uuid=f6b60129-b3eb-484d-8d55-75e2d9bab8c0&at=APZUnTX6mOYESajivM_fS6wGG1vD:1691861253566";
   };
+
+  // https://drive.usercontent.google.com/download?id=1ZdGB3Rj5KZMqdH3t-ztE1WfsZN4Sora0&export=download&authuser=0&confirm=t&uuid=f6b60129-b3eb-484d-8d55-75e2d9bab8c0&at=APZUnTX6mOYESajivM_fS6wGG1vD:1691861253566
 
   return (
     <Router>
