@@ -1,53 +1,84 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
-import projImg1 from "../assets/img/project-avigan.png";
-import projImg2 from "../assets/img/project-skills.png";
-import projImg3 from "../assets/img/project-ecco.png";
-import projImg4 from "../assets/img/project-misak.png";
-import projImg5 from "../assets/img/project-estudio.png";
-import projImg6 from "../assets/img/project-sercor.png";
-import projImg7 from "../assets/img/project-citobot.png";
+
+// Recent
+import projSmart from "../assets/img/project-smart.png";
+import projCitobot from "../assets/img/project-citobot.png";
+import projEcco from "../assets/img/project-ecco.png";
+import projAvigan from "../assets/img/project-avigan.png";
+
+// Startup
+import projMisak from "../assets/img/project-misak.png";
+import projEstudio from "../assets/img/project-estudio.png";
+import projSercor from "../assets/img/project-sercor.png";
+
+// Freelance
+import projQuipux from "../assets/img/project-quipux.png";
+import projPresupuesto from "../assets/img/project-presupuesto.png";
+import projSigma from "../assets/img/project-sigma.png";
+
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
 export const Projects = () => {
 
-  const projects = [
-    {
-      title: "Avigan Cloud",
-      description: "Design & Development",
-      imgUrl: projImg1,
-    },
+  const recenteProjects = [
     {
       title: "Smart Ambulance",
       description: "Design & Development",
-      imgUrl: projImg2,
+      imgUrl: projSmart,
     },
     {
       title: "Citobot",
       description: "Development & Update",
-      imgUrl: projImg7,
+      imgUrl: projCitobot,
     },
     {
       title: "Ecco",
       description: "Development & Update",
-      imgUrl: projImg3,
+      imgUrl: projEcco,
     },
+    {
+      title: "Avigan Cloud",
+      description: "Design & Development",
+      imgUrl: projAvigan,
+    }    
+  ];
+
+  const startupProjects = [
+    {
+      title: "Quipux",
+      description: "Design",
+      imgUrl: projQuipux,
+    },
+    {
+      title: "Presupuesto",
+      description: "Development",
+      imgUrl: projPresupuesto,
+    },
+    {
+      title: "Sigma",
+      description: "Development",
+      imgUrl: projSigma,
+    }  
+  ];
+
+  const freelanceProjects = [
     {
       title: "Misak Colombia",
       description: "Implementation & Update",
-      imgUrl: projImg4,
+      imgUrl: projMisak,
     },
     {
       title: "Estudio Bf",
       description: "Implementation & Update",
-      imgUrl: projImg5,
+      imgUrl: projEstudio,
     },
     {
       title: "Sercor",
       description: "Implementation & Update",
-      imgUrl: projImg6,
+      imgUrl: projSercor,
     }
     
   ];
@@ -62,25 +93,25 @@ export const Projects = () => {
               <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
                 <h2>Projects</h2>
                 <p>
-                Each of the following projects represents my passion for creating and solving problems through technology.
+                Here are some recent and past projects I've worked on.
                 </p>
-                <Tab.Container id="projects-tabs" defaultActiveKey="favorites">
+                <Tab.Container id="projects-tabs" defaultActiveKey="first">
                   <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
-                   {/*  <Nav.Item>
-                      <Nav.Link eventKey="favorites">Tab 1</Nav.Link>
-                    </Nav.Item> */}
+                   { <Nav.Item>
+                      <Nav.Link eventKey="first">Recent Works</Nav.Link>
+                    </Nav.Item>}
                     <Nav.Item>
-                      <Nav.Link eventKey="favorites">Favorites</Nav.Link>
+                      <Nav.Link eventKey="second">Freelance</Nav.Link>
                     </Nav.Item>
-                    {/* <Nav.Item>
-                      <Nav.Link eventKey="third">Tab 3</Nav.Link>
-                    </Nav.Item> */}
+                    {<Nav.Item>
+                      <Nav.Link eventKey="third">Startup Projects</Nav.Link>
+                    </Nav.Item>}
                   </Nav>
                   <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
-                    <Tab.Pane eventKey="favorites">
+                    <Tab.Pane eventKey="first">
                       <Row>
                         {
-                          projects.map((project, index) => {
+                          recenteProjects.map((project, index) => {
                             return (
                               <ProjectCard
                                 key={index}
@@ -91,11 +122,34 @@ export const Projects = () => {
                         }
                       </Row>
                     </Tab.Pane>
-                    <Tab.Pane eventKey="section">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
+                    <Tab.Pane eventKey="second">
+                      <Row>
+                        {
+                          freelanceProjects.map((project, index) => {
+                            return (
+                              <ProjectCard
+                                key={index}
+                                {...project}
+                                />
+                            )
+                          })
+                        }
+                      </Row>
+                    
                     </Tab.Pane>
                     <Tab.Pane eventKey="third">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
+                    <Row>
+                        {
+                          startupProjects.map((project, index) => {
+                            return (
+                              <ProjectCard
+                                key={index}
+                                {...project}
+                                />
+                            )
+                          })
+                        }
+                      </Row>
                     </Tab.Pane>
                   </Tab.Content>
                 </Tab.Container>
