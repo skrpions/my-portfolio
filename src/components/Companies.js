@@ -1,6 +1,6 @@
 import logoDreamcode from "../assets/img/companies/dreamcode.png";
 import logoAutonoma from "../assets/img/companies/autonoma.png";
-import logoInem from "../assets/img/companies/misak.png";
+import logoMisak from "../assets/img/companies/misak.png";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import colorSharp from "../assets/img/color-sharp.png"
@@ -45,7 +45,7 @@ export const Companies = () => {
                                 {<h5>Uniautónoma del Cauca</h5>}
                             </div>
                             {<div className="item">
-                                <img src={logoInem} alt="Image" />
+                                <img src={logoMisak} alt="Image" />
                                 {<h5>Misak</h5>}
                             </div>}
                            
