@@ -3,8 +3,6 @@ import meter2 from "../assets/img/meter2.svg";
 import meter3 from "../assets/img/meter3.svg";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import arrow1 from "../assets/img/arrow1.svg";
-import arrow2 from "../assets/img/arrow2.svg";
 import colorSharp from "../assets/img/color-sharp.png"
 
 export const Skills = () => {
@@ -36,7 +34,7 @@ export const Skills = () => {
                     <div className="skill-bx wow zoomIn">
                         <h2>Skills</h2>
                         {<p>My diverse skill set combines design creativity with technical soundness.
-                          <br></br> I have experience in front-end development using technologies such as:
+                          <br></br> I have experience in front-end and Back-end development using technologies such as:
                         </p>}
                         <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
                             <div className="item">
@@ -57,21 +55,20 @@ export const Skills = () => {
                             </div>
                             <div className="item">
                                 <img src={meter2} alt="Image" />
-                                <h5>Spring Boot</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter2} alt="Image" />
-                                <h5>MySQL</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter2} alt="Image" />
                                 <h5>Wordpress</h5>
+                            </div>
+                            <div className="item">
+                                <img src={meter2} alt="Image" />
+                                <h5>Spring Boot</h5>
                             </div>
                             <div className="item">
                                 <img src={meter3} alt="Image" />
                                 <h5>Jest</h5>
                             </div>
-                            
+                            <div className="item">
+                                <img src={meter2} alt="Image" />
+                                <h5>MySQL</h5>
+                            </div>
                         </Carousel>
                     </div>
                 </div>
