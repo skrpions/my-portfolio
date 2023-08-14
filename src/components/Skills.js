@@ -34,7 +34,7 @@ export const Skills = () => {
                     <div className="skill-bx wow zoomIn">
                         <h2>Skills</h2>
                         {<p>My diverse skill set combines design creativity with technical soundness.
-                          <br></br> I have experience in front-end and Back-end development using technologies such as:
+                          <br></br> I have experience in Front-end and Back-end development using technologies such as:
                         </p>}
                         <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
                             <div className="item">
